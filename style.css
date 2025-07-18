@@ -12,7 +12,7 @@ body {
 .container {
   text-align: center;
   width: 100%;
-  max-width: 1000px;
+  max-width: 1100px;
 }
 h1 {
   color: #00528e;
@@ -21,17 +21,17 @@ h1 {
 .icons {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 .icon-card {
   background: white;
   border: 2px solid #e0e0e0;
   border-radius: 12px;
-  padding: 20px 30px;
+  padding: 20px;
   font-size: 40px;
   cursor: pointer;
-  width: 250px;
+  width: 220px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
 }
