@@ -12,7 +12,7 @@ body {
 .container {
   text-align: center;
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
 }
 h1 {
   color: #00528e;
@@ -21,9 +21,8 @@ h1 {
 .icons {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
   flex-wrap: wrap;
-  margin-bottom: 40px;
 }
 .icon-card {
   background: white;
@@ -32,6 +31,7 @@ h1 {
   padding: 20px 30px;
   font-size: 40px;
   cursor: pointer;
+  width: 250px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
 }
@@ -50,4 +50,5 @@ h1 {
   border: none;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-top: 40px;
 }
