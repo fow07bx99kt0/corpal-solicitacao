@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Corpal Solicitações</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Corpal Solicitações</h1>
+    <div class="icons">
+      <div class="icon-card" onclick="loadForm('viagem')">
+        🧳
+        <p>Solicitação de Viagem</p>
+      </div>
+      <div class="icon-card" onclick="loadForm('hospedagem')">
+        🏨
+        <p>Solicitação de Hospedagem</p>
+      </div>
+    </div>
+    <div id="form-container"></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
