@@ -1,43 +1,42 @@
 
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Corpal Solicitações</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
 </head>
 <body>
-  <div class="container">
-    <h1>Corpal Solicitações</h1>
-    <div class="icons" id="icons">
-      <div class="icon-card" onclick="loadForm('viagem')">
-        🧳
-        <p>Solicitação de Viagem</p>
-      </div>
-      <div class="icon-card" onclick="loadForm('hospedagem')">
-        🏨
-        <p>Solicitação de Hospedagem</p>
-      </div>
-      <div class="icon-card" onclick="loadForm('inovacao')">
-        💡
-        <p>Solicitação Digital e Inovação</p>
-      </div>
+  <h1>Corpal Solicitações</h1>
+  <div class="icon-bar">
+    <button onclick="mostrarPainel('viagem')">🧳 Viagem</button>
+    <button onclick="mostrarPainel('hospedagem')">🏨 Hospedagem</button>
+    <button onclick="mostrarPainel('inovacao')">💡 Inovação</button>
+  </div>
+  <div id="painel-container">
+    <div id="viagem" class="painel" style="display:none;">
+      <h2>Solicitações de Viagem</h2>
+      <table>
+        <tr><th>Colaborador</th><th>Destino</th><th>Motivo</th><th>Status</th><th>Ações</th></tr>
+        <tr><td>João Silva</td><td>Curitiba</td><td>Visita técnica</td><td class="pendente">🔶 PENDENTE</td><td><button>✔️</button><button>❌</button></td></tr>
+        <tr><td>Maria Lima</td><td>São Paulo</td><td>Evento</td><td class="aprovado">🟢 APROVADO</td><td></td></tr>
+        <tr><td>Pedro Alves</td><td>Brasília</td><td>Reunião</td><td class="rejeitado">🔴 REJEITADO</td><td></td></tr>
+      </table>
     </div>
-    <div id="form-container" style="display:none;">
-      <div id="form-header">
-        <button onclick="voltarInicio()" class="back-button">🔄 Nova Solicitação</button>
-      </div>
-      <iframe id="form-frame" src="" allowfullscreen></iframe>
+    <div id="hospedagem" class="painel" style="display:none;">
+      <h2>Solicitações de Hospedagem</h2>
+      <table>
+        <tr><th>Colaborador</th><th>Cidade</th><th>Período</th><th>Status</th><th>Ações</th></tr>
+        <tr><td>Fernanda Costa</td><td>Recife</td><td>10-12/08</td><td class="pendente">🔶 PENDENTE</td><td><button>✔️</button><button>❌</button></td></tr>
+      </table>
     </div>
-    <div id="admin-access">
-      <button class="admin-button" onclick="mostrarSenha()">🔐 Acesso Administrador</button>
-      <div id="senha-container" style="display:none; margin-top: 10px;">
-        <input type="password" id="senhaInput" placeholder="Digite a senha" class="senha-input"/>
-        <button onclick="validarSenha()" class="admin-button">✔️ Entrar</button>
-      </div>
+    <div id="inovacao" class="painel" style="display:none;">
+      <h2>Solicitações de Inovação</h2>
+      <table>
+        <tr><th>Colaborador</th><th>Ideia</th><th>Impacto</th><th>Status</th><th>Ações</th></tr>
+        <tr><td>Lucas Ramos</td><td>App interno de RH</td><td>Redução de retrabalho</td><td class="pendente">🔶 PENDENTE</td><td><button>✔️</button><button>❌</button></td></tr>
+      </table>
     </div>
   </div>
-  <script src="app.js"></script>
 </body>
 </html>
