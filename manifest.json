@@ -1,8 +1,38 @@
 
 {
-  "manifestVersion": "1.0",
-  "id": "a3a2d4c1-1234-5678-abcd-corpal123456",
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.11",
   "version": "1.0.0",
-  "name": { "short": "Corpal", "full": "Corpal Solicitações" },
-  "description": { "short": "Solicitações internas", "full": "Gestão de solicitações de viagem, hospedagem e inovação" }
+  "id": "a3a2d4c1-1234-4b56-9abc-d12345678901",
+  "packageName": "com.corpal.solicitacoes",
+  "developer": {
+    "name": "Equipe Corpal",
+    "websiteUrl": "https://fow07bx99kt0.github.io/corpal-solicitacao/",
+    "privacyUrl": "https://fow07bx99kt0.github.io/corpal-solicitacao/politica",
+    "termsOfUseUrl": "https://fow07bx99kt0.github.io/corpal-solicitacao/termos"
+  },
+  "name": {
+    "short": "Corpal",
+    "full": "Corpal Solicitações"
+  },
+  "description": {
+    "short": "App de solicitações internas",
+    "full": "App interno para envio e aprovação de solicitações de viagem, hospedagem e inovação."
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "accentColor": "#009688",
+  "staticTabs": [
+    {
+      "entityId": "home",
+      "name": "Solicitações",
+      "contentUrl": "https://fow07bx99kt0.github.io/corpal-solicitacao/",
+      "websiteUrl": "https://fow07bx99kt0.github.io/corpal-solicitacao/",
+      "scopes": ["personal"]
+    }
+  ],
+  "permissions": ["identity", "messageTeamMembers"],
+  "validDomains": ["fow07bx99kt0.github.io"]
 }
