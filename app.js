@@ -1,6 +1,8 @@
 
 function loadForm(type) {
+  const icons = document.getElementById("icons");
   const formContainer = document.getElementById("form-container");
+  const iframe = document.getElementById("form-frame");
   let url = "";
   if (type === "viagem") {
     url = "https://forms.office.com/pages/responsepage.aspx?id=emONPyFz50qudewosdtpDEK_Qs0Wl59OqI5w8rrHBSlUNjZYRUdHUEtKNUNDSEYyV001TE9VU0ZUVy4u&origin=lprLink&route=shorturl";
@@ -9,6 +11,22 @@ function loadForm(type) {
   } else if (type === "inovacao") {
     url = "https://forms.office.com/Pages/ResponsePage.aspx?id=emONPyFz50qudewosdtpDCPJHkcW2CpMmyPiHvcb7dFUOUxBVkkzTExFVlZSWVNETjVSMkw5MDZJRi4u";
   }
+  icons.style.display = "none";
+  formContainer.style.display = "block";
+  iframe.src = url;
+}
 
-  formContainer.innerHTML = `<iframe src="${url}" allowfullscreen></iframe>`;
+function voltarInicio() {
+  document.getElementById("form-frame").src = "";
+  document.getElementById("form-container").style.display = "none";
+  document.getElementById("icons").style.display = "flex";
+}
+
+function acessoAdmin() {
+  const senha = prompt("Digite a senha de administrador:");
+  if (senha === "corpal2025") {
+    window.location.href = "painel.html";
+  } else if (senha !== null) {
+    alert("Senha incorreta. Acesso negado.");
+  }
 }

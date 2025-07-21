@@ -10,7 +10,7 @@
 <body>
   <div class="container">
     <h1>Corpal Solicitações</h1>
-    <div class="icons">
+    <div class="icons" id="icons">
       <div class="icon-card" onclick="loadForm('viagem')">
         🧳
         <p>Solicitação de Viagem</p>
@@ -24,7 +24,15 @@
         <p>Solicitação Digital e Inovação</p>
       </div>
     </div>
-    <div id="form-container"></div>
+    <div id="form-container" style="display:none;">
+      <div id="form-header">
+        <button onclick="voltarInicio()" class="back-button">🔄 Nova Solicitação</button>
+      </div>
+      <iframe id="form-frame" src="" allowfullscreen></iframe>
+    </div>
+    <div id="admin-access">
+      <button class="admin-button" onclick="acessoAdmin()">🔐 Acesso Administrador</button>
+    </div>
   </div>
   <script src="app.js"></script>
 </body>
