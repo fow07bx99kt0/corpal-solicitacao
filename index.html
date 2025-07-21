@@ -122,5 +122,89 @@ h1 {
     </div>
   </div>
   <script src="app.js"></script>
+
+<div id="painel-admin" style="display: none; margin-top: 30px;">
+  <h2>Painel Administrativo</h2>
+  <h1>Painel de Solicitações</h1>
+  <button class="back-button" onclick="voltar()">🔙 Voltar para Solicitações</button>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Setor</th>
+        <th>Tipo</th>
+        <th>Data</th>
+        <th>Status</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1001</td>
+        <td>Marcelo Rodrigues</td>
+        <td>Engenharia</td>
+        <td>Viagem</td>
+        <td>21/07/2025</td>
+        <td><strong style="color: orange;">Pendente</strong></td>
+        <td>
+          <button class="btn-aprovar">Aprovar</button>
+          <button class="btn-rejeitar">Rejeitar</button>
+        </td>
+      </tr>
+      <tr>
+        <td>1002</td>
+        <td>Eloisa Silva</td>
+        <td>Inovação</td>
+        <td>Hospedagem</td>
+        <td>20/07/2025</td>
+        <td><strong style="color: green;">Aprovado</strong></td>
+        <td>
+          <button class="btn-aprovar">Aprovar</button>
+          <button class="btn-rejeitar">Rejeitar</button>
+        </td>
+      </tr>
+      <tr>
+        <td>1003</td>
+        <td>João Mendes</td>
+        <td>Financeiro</td>
+        <td>Inovação</td>
+        <td>19/07/2025</td>
+        <td><strong style="color: orange;">Pendente</strong></td>
+        <td>
+          <button class="btn-aprovar">Aprovar</button>
+          <button class="btn-rejeitar">Rejeitar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <script>
+    function voltar() {
+      window.location.href = "index.html";
+    }
+  </script>
+  <br>
+  <button onclick="voltarInicio()" style="
+    background-color: #2d3748;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+  ">⬅ Voltar</button>
+</div>
+
 </body>
+
+<script>
+function abrirPainel() {
+  document.querySelectorAll('.card, h1, button:not(#painel-admin button)').forEach(el => el.style.display = 'none');
+  document.getElementById('painel-admin').style.display = 'block';
+}
+function voltarInicio() {
+  document.querySelectorAll('.card, h1, button:not(#painel-admin button)').forEach(el => el.style.display = '');
+  document.getElementById('painel-admin').style.display = 'none';
+}
+</script>
 </html>
