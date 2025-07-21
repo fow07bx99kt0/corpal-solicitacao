@@ -29,7 +29,13 @@ function mostrarSenha() {
 function validarSenha() {
   const senha = document.getElementById("senhaInput").value;
   if (senha === "corpal2025") {
-    window.location.href = "painel.html";
+    const icons = document.getElementById("icons");
+    const formContainer = document.getElementById("form-container");
+    const iframe = document.getElementById("form-frame");
+
+    icons.style.display = "none";
+    formContainer.style.display = "block";
+    iframe.src = "painel.html";
   } else {
     alert("Senha incorreta.");
   }
