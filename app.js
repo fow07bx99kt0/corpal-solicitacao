@@ -22,15 +22,11 @@ function voltarInicio() {
   document.getElementById("icons").style.display = "flex";
 }
 
-function mostrarSenha() {
-  document.getElementById("senha-container").style.display = "block";
-}
-
-function validarSenha() {
-  const senha = document.getElementById("senhaInput").value;
+function acessoAdmin() {
+  const senha = prompt("Digite a senha de administrador:");
   if (senha === "corpal2025") {
     window.location.href = "painel.html";
-  } else {
-    alert("Senha incorreta.");
+  } else if (senha !== null) {
+    alert("Senha incorreta. Acesso negado.");
   }
 }
