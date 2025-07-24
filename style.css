@@ -96,3 +96,12 @@ html, body {
     background-size: contain;
     background-color: #f5f8fc;
 }
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    background: url('./logo-fundo.png') no-repeat center center fixed;
+    background-size: contain;
+    background-color: #f5f8fc;
+}
