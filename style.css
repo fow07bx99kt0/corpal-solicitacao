@@ -87,3 +87,12 @@ body {
     background: url('bg-logo.png') no-repeat center center fixed;
     background-size: cover;
 }
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    background: url('bg-logo.png') no-repeat center center fixed;
+    background-size: contain;
+    background-color: #f5f8fc;
+}
