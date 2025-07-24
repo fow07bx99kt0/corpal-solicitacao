@@ -81,3 +81,9 @@ h1 {
 .admin-button:hover {
   background-color: #5a6268;
 }
+
+
+body {
+    background: url('bg-logo.png') no-repeat center center fixed;
+    background-size: cover;
+}
