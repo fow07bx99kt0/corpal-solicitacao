@@ -15,6 +15,10 @@ function loadForm(type) {
     url = "https://form.jotform.com/252023929762056";
   }
 
+  } else if (type === "caju") {
+    window.open("https://forms.office.com/Pages/ResponsePage.aspx?id=emONPyFz50qudewosdtpDOBfNYYroc1Opt5ttN-afM5UNjVXMU1VQUFWRUFJWFo0UUoxSUVJSjlBTS4u", "_blank");
+    return;
+
   } else if (type === "veiculo") {
     url = "https://forms.office.com/pages/responsepage.aspx?id=emONPyFz50qudewosdtpDEK_Qs0Wl59OqI5w8rrHBSlUMkUyOUNWVTVBQ1hHMUtDMkIwTUU0TUZTQi4u&origin=lprLink&route=shorturl";
 
