@@ -15,6 +15,9 @@ function loadForm(type) {
     url = "https://form.jotform.com/252023929762056";
   }
 
+  } else if (type === "veiculo") {
+    url = "https://forms.office.com/pages/responsepage.aspx?id=emONPyFz50qudewosdtpDEK_Qs0Wl59OqI5w8rrHBSlUMkUyOUNWVTVBQ1hHMUtDMkIwTUU0TUZTQi4u&origin=lprLink&route=shorturl";
+
   icons.style.display = "none";
   formContainer.style.display = "block";
   iframe.src = url;
