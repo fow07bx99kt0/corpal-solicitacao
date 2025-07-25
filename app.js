@@ -9,9 +9,6 @@ function loadForm(type) {
   } else if (type === "hospedagem") {
     url = "https://forms.office.com/pages/responsepage.aspx?id=emONPyFz50qudewosdtpDEK_Qs0Wl59OqI5w8rrHBSlUNDcxRlZHRzBKMjVJM1lWVFc4UU8zOUc0SS4u&origin=lprLink&route=shorturl";
   } else if (type === "inovacao") {
-  } else if (type === "cessao") {
-    url = "https://form.jotform.com/252023929762056";
-
     url = "https://forms.office.com/Pages/ResponsePage.aspx?id=emONPyFz50qudewosdtpDCPJHkcW2CpMmyPiHvcb7dFUOUxBVkkzTExFVlZSWVNETjVSMkw5MDZJRi4u";
   }
   icons.style.display = "none";
