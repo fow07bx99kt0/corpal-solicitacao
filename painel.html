@@ -2,83 +2,137 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Corpal Solicitações</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .cards {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-        .card {
-            width: 220px;
-            height: 160px;
-            background-color: #fff;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-        .card:hover {
-            transform: scale(1.03);
-        }
-        .card img {
-            width: 50px;
-            height: 50px;
-            margin-bottom: 10px;
-        }
-        .admin-button {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        .admin-access {
-            background-color: #555;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .card-cessao {
-            background-color: #ffcccc;
-            border: 2px solid red;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Painel de Solicitações - Corpal</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f7fa;
+      padding: 40px;
+      text-align: center;
+    }
+    h1 {
+      color: #00528e;
+    }
+    table {
+      margin: 30px auto;
+      border-collapse: collapse;
+      width: 90%;
+      max-width: 1000px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      font-size: 14px;
+    }
+    th {
+      background-color: #00528e;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f0f0f0;
+    }
+    .btn-aprovar, .btn-rejeitar {
+      padding: 6px 12px;
+      border: none;
+      border-radius: 4px;
+      color: white;
+      cursor: pointer;
+    }
+    .btn-aprovar {
+      background-color: #28a745;
+    }
+    .btn-rejeitar {
+      background-color: #dc3545;
+    }
+    .back-button {
+      background-color: #00528e;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .back-button:hover {
+      background-color: #003f6b;
+    }
+  </style>
 </head>
 <body>
-    <h1>Corpal Solicitações</h1>
-    <div class="cards">
-        <div class="card" onclick="window.location.href='viagem.html'">
-            <img src="viagem.png" alt="Ícone Viagem">
-            <p>Solicitação de Viagem</p>
-        </div>
-        <div class="card" onclick="window.location.href='hospedagem.html'">
-            <img src="hospedagem.png" alt="Ícone Hospedagem">
-            <p>Solicitação de Hospedagem</p>
-        </div>
-        <div class="card" onclick="window.location.href='inovacao.html'">
-            <img src="inovacao.png" alt="Ícone Inovação">
-            <p>Solicitação Digital e Inovação</p>
-        </div>
-        <div class="card" onclick="window.location.href='caju.html'">
-            <img src="caju.png" alt="Ícone Caju">
-            <p>Solicitação Caju</p>
-        </div>
-        <div class="card card-cessao" onclick="window.location.href='cessao.html'">
-            <img src="cessao.png" alt="Ícone Cessão">
-            <p style="color:red;"><strong>Cessão de Direitos</strong></p>
-        </div>
-    </div>
-    <div class="admin-button">
-        <a href="admin.html" class="admin-access">🔒 Acesso Administrador</a>
-    </div>
+  <h1>Painel de Solicitações</h1>
+  <button class="back-button" onclick="voltar()">🔙 Voltar para Solicitações</button>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Setor</th>
+        <th>Tipo</th>
+        <th>Data</th>
+        <th>Status</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1001</td>
+        <td>Marcelo Rodrigues</td>
+        <td>Engenharia</td>
+        <td>Viagem</td>
+        <td>21/07/2025</td>
+        <td><strong style="color: orange;">Pendente</strong></td>
+        <td>
+          <button class="btn-aprovar">Aprovar</button>
+          <button class="btn-rejeitar">Rejeitar</button>
+        </td>
+      </tr>
+      <tr>
+        <td>1002</td>
+        <td>Eloisa Silva</td>
+        <td>Inovação</td>
+        <td>Hospedagem</td>
+        <td>20/07/2025</td>
+        <td><strong style="color: green;">Aprovado</strong></td>
+        <td>
+          <button class="btn-aprovar">Aprovar</button>
+          <button class="btn-rejeitar">Rejeitar</button>
+        </td>
+      </tr>
+      <tr>
+        <td>1003</td>
+        <td>João Mendes</td>
+        <td>Financeiro</td>
+        <td>Inovação</td>
+        <td>19/07/2025</td>
+        <td><strong style="color: orange;">Pendente</strong></td>
+        <td>
+          <button class="btn-aprovar">Aprovar</button>
+          <button class="btn-rejeitar">Rejeitar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <script>
+    function voltar() {
+      window.location.href = "index.html";
+    }
+  </script>
+
+<div class="button" onclick="showIframe('https://form.jotform.com/252023929762056')">
+  <img src="outline.png" alt="Ícone" width="24" height="24">
+  <span>Cessão de Direitos</span>
+</div>
+
+
+<script>
+function showIframe(url) {
+  document.getElementById('iframeContainer').innerHTML = '<iframe src="' + url + '" width="100%" height="600" frameborder="0" style="border:none;"></iframe>';
+}
+</script>
+<div id="iframeContainer" style="margin-top:20px;"></div>
+
 </body>
 </html>
