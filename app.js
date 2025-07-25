@@ -34,3 +34,9 @@ function acessoAdmin() {
     alert("Senha incorreta. Acesso negado.");
   }
 }
+
+
+document.getElementById("btnSolicitacaoVeiculo").addEventListener("click", function () {
+    document.getElementById("formFrame").src = "https://forms.office.com/pages/responsepage.aspx?id=emONPyFz50qudewosdtpDEK_Qs0Wl59OqI5w8rrHBSlUMkUyOUNWVTVBQ1hHMUtDMkIwTUU0TUZTQi4u&origin=lprLink&route=shorturl";
+    document.getElementById("formFrame").style.display = "block";
+});
