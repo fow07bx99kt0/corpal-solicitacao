@@ -30,6 +30,15 @@
   <img src="caju.png" alt="Ícone Caju" />
   <p>Solicitação Caju</p>
 </div>
+    
+    
+    <div class="card" onclick="loadForm('cessao')">
+      <p style="font-size: 48px; margin: 0;">📑</p>
+      <p>Solicitação Cessão de Direitos</p>
+    </div>
+
+
+
 
     </div>
     <div id="form-container" style="display:none;">
@@ -43,5 +52,13 @@
     </div>
   </div>
   <script src="app.js"></script>
+
+<script>
+  function abrirFormulario(url) {
+    document.getElementById('form-frame').src = url;
+    document.getElementById('form-container').style.display = 'block';
+  }
+</script>
+
 </body>
 </html>
