@@ -12,6 +12,8 @@ function loadForm(type) {
   } else if (type === "inovacao") {
     url = "https://forms.office.com/Pages/ResponsePage.aspx?id=emONPyFz50qudewosdtpDCPJHkcW2CpMmyPiHvcb7dFUOUxBVkkzTExFVlZSWVNETjVSMkw5MDZJRi4u";
   } else if (type === "cessao") {
+  } else if (type === "veiculo") {
+    url = "https://forms.office.com/pages/responsepage.aspx?id=emONPyFz50qudewosdtpDEK_Qs0Wl59OqI5w8rrHBSlUMkUyOUNWVTVBQ1hHMUtDMkIwTUU0TUZTQi4u&origin=lprLink&route=shorturl";
     url = "https://form.jotform.com/252023929762056";
   }
 
